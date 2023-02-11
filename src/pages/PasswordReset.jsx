@@ -13,9 +13,11 @@ const PasswordReset = () => {
     e.preventDefault();
     try {
       setLoading(true);
-      const { data, error } = await passwordReset(emailRef.current.value);
-      setMsg("Password reset has been sent to your email");
-    } catch (e) {
+      const { error } = await passwordReset(emailRef.current.value);
+      if (!error) {
+        setMsg("Password reset has been sent to your email");
+      }
+c    } catch (e) {
       console.error(e);
     }
     setLoading(false);

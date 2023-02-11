@@ -28,7 +28,7 @@ const PasswordReset = () => {
     <>
       <Card>
         <Card.Body>
-          <h2 className="text-center mb-4">Login</h2>
+          <h2 className="text-center mb-4">Reset Password</h2>
           <Form onSubmit={handleSubmit}>
             <Form.Group id="email">
               <Form.Label>Email</Form.Label>

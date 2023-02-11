@@ -12,14 +12,11 @@ const PasswordReset = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      console.log("Hi");
       setLoading(true);
       const { data, error } = await passwordReset(emailRef.current.value);
-      console.log(error);
-      console.log(data);
       setMsg("Password reset has been sent to your email");
     } catch (e) {
-      console.log(e);
+      console.error(e);
     }
     setLoading(false);
   };
